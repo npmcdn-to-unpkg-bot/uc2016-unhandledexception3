@@ -1,1 +1,1 @@
-﻿angular.module('widget', ['lovely','ngToast'])
+﻿angular.module('widget', ['lovely','dx'])

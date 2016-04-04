@@ -1,7 +1,7 @@
 ﻿angular.module('widget')
 .directive("kpi", function () {
 
-    var kpiController = ['$scope','lovelyDataService','ngToast','$interval', function ($scope, lovelyDataService, ngToast, $interval) {
+    var kpiController = ['$scope','lovelyDataService','$interval', function ($scope, lovelyDataService, $interval) {
         $scope.value = "";
         $scope.units = "";
 
@@ -10,10 +10,7 @@
                 $scope.value = result.data.Value;
                 $scope.units = result.data.UnitsAbbreviation;
             }, function (error) {
-                ngToast.create({
-                    className: 'warning',
-                    content: 'Could not retrieve KPI'
-                });
+
             });
         }
 
@@ -25,10 +22,7 @@
             $interval.cancel($scope.refreshInterval);
             $scope.refreshInterval = null;
         });
-        ngToast.create({
-            className: 'warning',
-            content: 'Could not retrieve KPI'
-        });
+
         $scope.getData();
     }];
 

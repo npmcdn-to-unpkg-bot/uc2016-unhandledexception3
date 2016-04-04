@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'packery.controllers','widget','lovely','ngToast'])
+angular.module('starter', ['ionic', 'starter.controllers', 'packery.controllers','widget','lovely','dx'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,7 +22,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'packery.controllers'
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, ngToastProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
       .state('app', {
