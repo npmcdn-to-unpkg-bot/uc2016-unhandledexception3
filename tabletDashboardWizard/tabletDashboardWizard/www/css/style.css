@@ -1,1 +1,38 @@
 /* Empty. Add your own CSS if you like */
+@import "compass/css3";
+
+* {
+    @include box-sizing(border-box);
+}
+
+.module-container {
+    width: 100%;
+    border: 1px solid darken(#eaeaea, 10%);
+ 
+}
+
+.module-container:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+.module {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #eaeaea;
+    background-color: darken(#eaeaea, 15%);
+    float: left;
+}
+
+.module.is-dragging {
+    z-index: 2;
+}
+
+.packery-drop-placeholder {
+  outline: 3px dashed #444;
+  outline-offset: -6px;
+  /* transition position changing */
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
