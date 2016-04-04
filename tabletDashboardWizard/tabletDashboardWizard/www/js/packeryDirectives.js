@@ -6,6 +6,7 @@
             configuration: "="
         },
         restrict: 'A',
+        transclude: true,
         link: function ($scope, element, attributes) {
 
             element.ready(function () {
@@ -22,7 +23,7 @@
             });
 
             for (var i = 0; i < $scope.configuration.Widgets.length; i++) {
-                var widgetElement = angular.element("<div class='module'>configuration.Widgets[" + i + "]</div>");
+                var widgetElement = angular.element("<div packery-Container configuration='configuration.Widgets[" + i + "]' class='module'></div>");
                 $compile(widgetElement)($scope);
                 element.append(widgetElement);
                 $compile(widgetElement)($scope);
@@ -36,8 +37,12 @@
             configuration: '='
         },
         restrict: 'A',
+        transclude: true,
         link: function ($scope, element, attributes) {
+            var container = $scope.configuration.container;
 
+            element.css('width', container.width * 100 + 'px !important');
+            element.css('height', container.height * 100 + 'px !important');
         }
     }
 })

@@ -17,8 +17,20 @@ angular.module('starter.controllers', [])
     $scope.config = {
         PackeryConfig: { config: true },
         Widgets: [
-            { type: "gauge" },
-            { type: "chart"}
+            {
+                type: "gauge",
+                container: {
+                    width: 1,
+                    height: 2,
+                }
+            },
+            {
+                type: "trend",
+                container: {
+                    width: 3,
+                    height: 1
+                }
+            }
         ]
     }
 })
