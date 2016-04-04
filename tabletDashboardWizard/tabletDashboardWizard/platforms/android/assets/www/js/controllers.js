@@ -15,19 +15,25 @@ angular.module('starter.controllers', [])
 .controller('DashboardCtrl', function ($scope) {
 
     $scope.config = {
-        PackeryConfig: { config: true },
+        PackeryConfig: {  },
         Widgets: [
             {
-                type: "gauge",
+                widget:{
+                    type: 'trend'
+                },
                 container: {
                     width: 1,
                     height: 2,
                 }
             },
             {
-                type: "trend",
+                widget: {
+                    type: 'kpi',
+                    refreshInterval: '5',
+                    webId: 'A0EPUDmN4uvgkyiAt_SPv5vtg991umqry5RGAvwANOjKA4ANSkJlh49lVwXIb5mEqRnkwSlVQSVRFUjAwMVxTQU4gRElFR08gQUlSUE9SVFxIVkFDXFRFUk1JTkFMU1xURVJNSU5BTCAxXEVBU1RcQUlSIEhBTkRMRVIgMjhcQUgtMjggUkVUVVJOIEFJUiBDQUxDVUxBVElPTlN8Uk9PTSBDQVJCT04gRElPWElERQ'
+                },
                 container: {
-                    width: 3,
+                    width: 2,
                     height: 1
                 }
             }

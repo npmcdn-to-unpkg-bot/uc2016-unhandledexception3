@@ -1,4 +1,4 @@
-﻿angular.module('packery.controllers', [])
+﻿angular.module('packery.controllers', ['widget'])
 
 .directive('packeryWorkspace', function ($compile) {
     return {
@@ -26,12 +26,12 @@
                 var widgetElement = angular.element("<div packery-Container configuration='configuration.Widgets[" + i + "]' class='module'></div>");
                 $compile(widgetElement)($scope);
                 element.append(widgetElement);
-                $compile(widgetElement)($scope);
             }
         }
     }
 })
 .directive('packeryContainer', function ($compile) {
+
     return {
         scope : {
             configuration: '='
@@ -40,9 +40,16 @@
         transclude: true,
         link: function ($scope, element, attributes) {
             var container = $scope.configuration.container;
+            var widget = $scope.configuration.widget;
 
-            element.css('width', container.width * 100 + 'px !important');
-            element.css('height', container.height * 100 + 'px !important');
+            //set container size
+            element.addClass("width-" + container.width);
+            element.addClass("height-" + container.height);
+
+            //create and compile widget
+            var widgetElement = angular.element("<" + widget.type + " config='configuration.widget'></" + widget.type + ">");
+            $compile(widgetElement)($scope);
+            element.append(widgetElement);
         }
     }
 })

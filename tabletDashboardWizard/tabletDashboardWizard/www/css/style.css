@@ -8,7 +8,6 @@
 .module-container {
     width: 100%;
     border: 1px solid darken(#eaeaea, 10%);
- 
 }
 
 .module-container:after {
@@ -19,8 +18,64 @@
 
 .module {
     border: 1px solid #eaeaea;
-    background-color: darken(#eaeaea, 15%);
+    //background-color: darken(#eaeaea, 15%);
     float: left;
+}
+
+.module.width-1 {
+    width:100px;
+}
+
+.module.width-2 {
+    width:200px;
+}
+
+.module.width-3 {
+    width:300px;
+}
+
+.module.width-4 {
+    width:400px;
+}
+
+.module.width-5 {
+    width:500px;
+}
+
+.module.width-6 {
+    width:600px;
+}
+
+.module.width-7 {
+    width:700px;
+}
+
+.module.height-1 {
+    height:100px;
+}
+
+.module.height-2 {
+    height:200px;
+}
+
+.module.height-3 {
+    height:300px;
+}
+
+.module.height-4 {
+    height:400px;
+}
+
+.module.height-5 {
+    height:500px;
+}
+
+.module.height-6 {
+    height:600px;
+}
+
+.module.height-7 {
+    height:700px;
 }
 
 .module.is-dragging {
