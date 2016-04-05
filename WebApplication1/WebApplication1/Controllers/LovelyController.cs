@@ -87,7 +87,7 @@ namespace WebApplication1.Controllers
                 foreach (var id in _WebId)
                 {
                     ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                    string uri = string.Format(@"https://proghackuc2016.osisoft.com/piwebapi/streams/{0}/plot", id);
+                    string uri = string.Format(@"https://proghackuc2016.osisoft.com/piwebapi/streams/{0}/interpolated", id);
                     HttpResponseMessage response = await client.GetAsync(uri);
 
                     var data = (JArray)JObject.Parse(await response.Content.ReadAsStringAsync())["Items"];
@@ -112,6 +112,5 @@ namespace WebApplication1.Controllers
             }
         }
 
-        //public async Task
     }
 }
