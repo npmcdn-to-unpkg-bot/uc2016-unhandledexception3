@@ -5,6 +5,15 @@
     var getKpi = function (webId) {
         return $http.get(endpoint + 'GetKPI?_WebId=' + webId);
     }
+
+    var getKpis = function (webIds) {
+        var url = "?garbage=0";
+        for (var i = 0; i < webIds.length; i++) {
+            url += "&_WebId=" + webIds[i];
+        }
+
+        return $http.get(endpoint + 'GetKPI' + url);
+    }
     
     var getDashboards = function () {
         return $http.get(endpoint + 'getdashboards');
@@ -16,6 +25,7 @@
 
     return {
         getKpi: getKpi,
+        getKpis: getKpis,
         getDashboards: getDashboards,
         getDashboardConfig: getDashboardConfig
     }
