@@ -28,7 +28,7 @@ angular.module('starter.controllers', [])
                     widget: {
                         type: 'kpi',
                         refresh: '5',
-                        webId: 'A0EPUDmN4uvgkyiAt_SPv5vtg991umqry5RGAvwANOjKA4ANSkJlh49lVwXIb5mEqRnkwSlVQSVRFUjAwMVxTQU4gRElFR08gQUlSUE9SVFxIVkFDXFRFUk1JTkFMU1xURVJNSU5BTCAxXEVBU1RcQUlSIEhBTkRMRVIgMjhcQUgtMjggUkVUVVJOIEFJUiBDQUxDVUxBVElPTlN8Uk9PTSBDQVJCT04gRElPWElERQ'
+                        webId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOw6Q4Y3pFAE1c8OsWcnuWfCgU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQUlSIFRFTVBFUkFUVVJF'
                     },
                     container: {
                         width: 2,
@@ -36,12 +36,12 @@ angular.module('starter.controllers', [])
                     }
                 }, {
                     widget: {
-                        type: 'bullet',
+                        type: 'linear-gauge',
                         refresh: '5',
                         start: 0,
                         end: 1500,
-                        targetId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwffXeUu7YkFEalWC0lAWq6gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgTUFYSU1VTQ',
-                        startId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwgX6mwhal-Vw47iSXovLi1gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgMS1IT1VSIE1BWElNVU0'
+                        //targetId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwffXeUu7YkFEalWC0lAWq6gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgTUFYSU1VTQ',
+                        webId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwgX6mwhal-Vw47iSXovLi1gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgMS1IT1VSIE1BWElNVU0'
                     },
                     container: {
                         width: 3,
@@ -75,6 +75,17 @@ angular.module('starter.controllers', [])
                      }
                  },
 
+                 {
+                     widget: {
+                         type: 'kpiValueOnly',
+                         refresh: '5',
+                         webId: 'A0EPUDmN4uvgkyiAt_SPv5vtg991umqry5RGAvwANOjKA4ANSkJlh49lVwXIb5mEqRnkwSlVQSVRFUjAwMVxTQU4gRElFR08gQUlSUE9SVFxIVkFDXFRFUk1JTkFMU1xURVJNSU5BTCAxXEVBU1RcQUlSIEhBTkRMRVIgMjhcQUgtMjggUkVUVVJOIEFJUiBDQUxDVUxBVElPTlN8Uk9PTSBDQVJCT04gRElPWElERQ'
+                     },
+                     container: {
+                         width: 1,
+                         height: 1
+                     }
+                 },
                   {
                       widget: {
                           type: 'kpi3',
