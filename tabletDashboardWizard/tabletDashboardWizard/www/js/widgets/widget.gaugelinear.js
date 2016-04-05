@@ -20,9 +20,9 @@
 			rangeContainer: {
 				offset: 10,
 				ranges: [
-					{ startValue: 0, endValue: 550, color: '#92000A' },
+					{ startValue: 0, endValue: 550, color: '#77DD77' },
 					{ startValue: 550, endValue: 750, color: '#E6E200' },
-					{ startValue: 750, endValue: 1500, color: '#77DD77' }
+					{ startValue: 750, endValue: 1500, color: '#92000A' }
 				]
 			},
 			valueIndicator: {
@@ -32,7 +32,7 @@
 				offset: -15
 			},
 			title: {
-				text: 'Carbon Dioxide Levels (ppm)',
+				text: $scope.config.title,
 				font: { size: 16 }
 			},
 			bindingOptions: {

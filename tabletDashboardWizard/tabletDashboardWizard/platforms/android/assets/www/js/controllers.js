@@ -19,47 +19,7 @@ angular.module('starter.controllers', [])
     }
 
     lovelyDataService.getDashboardConfig($stateParams.dashboardId).then(function (results) {
-        //$scope.config = JSON.parse(results.data.Value);
-
-        $scope.config = {
-            PackeryConfig: {},
-            Widgets: [
-                {
-                    widget: {
-                        type: 'kpi',
-                        refresh: '5',
-                        webId: 'A0EPUDmN4uvgkyiAt_SPv5vtg991umqry5RGAvwANOjKA4ANSkJlh49lVwXIb5mEqRnkwSlVQSVRFUjAwMVxTQU4gRElFR08gQUlSUE9SVFxIVkFDXFRFUk1JTkFMU1xURVJNSU5BTCAxXEVBU1RcQUlSIEhBTkRMRVIgMjhcQUgtMjggUkVUVVJOIEFJUiBDQUxDVUxBVElPTlN8Uk9PTSBDQVJCT04gRElPWElERQ'
-                    },
-                    container: {
-                        width: 2,
-                        height: 2
-                    }
-                }, {
-                    widget: {
-<<<<<<< HEAD
-                        type: 'trend',
-                        refresh: '5',
-                        name: 'Supply Air Temperature',
-                        trend1: 'Temperature',
-                        trend2: 'Setpoint',
-                        targetId: 'A0EtIcvAS36yE2ccCuS-tUXgAZzPZ9ZX65RGAygANOjDYOwWCD6lbIP3kWsM2AIgOCzKQU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4fFRFUk1JTkFMIDEgRUFTVCBBSC0yOCBTVVBQTFkgQUlSIFRFTVBFUkFUVVJF',
-                        startId: 'A0EtIcvAS36yE2ccCuS-tUXgAZzPZ9ZX65RGAygANOjDYOwQU9XdPkCzk6XmezuIXlCXQU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4fFRFUk1JTkFMIDEgRUFTVCBBSC0yOCBTVVBQTFkgQUlSIFNFVCBQT0lOVA'
-=======
-                        type: 'linear-gauge',
-                        refresh: '5',
-                        start: 0,
-                        end: 1500,
-                        //targetId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwffXeUu7YkFEalWC0lAWq6gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgTUFYSU1VTQ',
-                        webId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwgX6mwhal-Vw47iSXovLi1gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgMS1IT1VSIE1BWElNVU0'
->>>>>>> origin/sarven
-                    },
-                    container: {
-                        width: 7,
-                        height: 4
-                    }
-                },
-            ]
-        }
+        $scope.config = JSON.parse(results.data.Value);
     });
 })
 

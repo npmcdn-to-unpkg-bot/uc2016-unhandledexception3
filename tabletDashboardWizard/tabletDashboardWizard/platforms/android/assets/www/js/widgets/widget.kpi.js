@@ -19,7 +19,7 @@
                 ]
             },
             title:{
-                text: 'Room Air Temp',
+                text: $scope.config.name,
                 verticalAlignment: 'bottom',
                 placeholderSize:10,
                 margin: { top: 40},
