@@ -7,8 +7,8 @@
 
         $scope.getData = function () {
             lovelyDataService.getKpi($scope.config.webId).then(function (result) {
-                $scope.value = result.data.Value;
-                $scope.units = result.data.UnitsAbbreviation;
+                $scope.value = result.data[0].Value;
+                $scope.units = result.data[0].UnitsAbbreviation;
             }, function (error) {
 
             });
@@ -25,7 +25,6 @@
 
         $scope.getData();
     }];
-
 
     return {
         scope: {
