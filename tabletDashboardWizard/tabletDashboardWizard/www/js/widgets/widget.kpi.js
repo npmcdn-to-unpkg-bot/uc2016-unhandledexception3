@@ -8,14 +8,14 @@
         $scope.kpiValue = {
             scale: {
                 startValue: 0,
-                endValue: 1000,
+                endValue: 1500,
                 tickInterval: 100
             },
             rangeContainer: {
                 ranges: [
-                    { startValue: 0, endValue: 750 },
-                     { startValue: 750, endValue: 1000 },
-                    { startValue: 750, endValue: 1000 }
+                    { startValue: 0, endValue: 1000 },
+                     { startValue: 1000, endValue: 1500 },
+                    { startValue: 1000, endValue: 1500 }
                 ]
             },
             title:{

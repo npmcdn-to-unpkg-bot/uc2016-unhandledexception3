@@ -1,0 +1,12 @@
+{
+  "name": "ionic-sidemenu",
+  "private": true,
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "packery": "~2.0.0",
+    "ngtoast": "~2.0.0",
+    "jquery": "2.1.4"
+  }
+}

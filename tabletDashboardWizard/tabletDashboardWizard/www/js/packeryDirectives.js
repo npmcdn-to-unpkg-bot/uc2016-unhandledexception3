@@ -33,7 +33,11 @@
                 });
 
                 for (var i = 0; i < $scope.configuration.Widgets.length; i++) {
-                    var widgetElement = angular.element("<div packery-Container configuration='configuration.Widgets[" + i + "]' class='module'></div>");
+                    if ($scope.configuration.Widgets[i].widget.type == 'bullet')
+                        var widgetElement = angular.element("<div packery-Container configuration='configuration.Widgets[" + i + "]' class='module'></div>");
+                    else
+                        var widgetElement = angular.element("<div packery-Container configuration='configuration.Widgets[" + i + "]' class='module nonBullet'></div>");
+
                     $compile(widgetElement)($scope);
                     element.append(widgetElement);
                 }

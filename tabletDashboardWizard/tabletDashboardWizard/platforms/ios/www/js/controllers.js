@@ -11,71 +11,57 @@ angular.module('starter.controllers', [])
 
   
 })
+.controller('DashboardCtrl', function ($scope, lovelyDataService, $stateParams) {
+    $scope.config = {};
 
-.controller('DashboardCtrl', function ($scope) {
-<<<<<<< HEAD
-=======
-    
-
-
-
->>>>>>> alanTheGreat
-
-    $scope.config = {
-        PackeryConfig: {  },
-        Widgets: [
-            {
-                widget:{
-                    type: 'trend'
-                },
-                container: {
-<<<<<<< HEAD
-                    width: 2,
-=======
-                    width: 1,
->>>>>>> alanTheGreat
-                    height: 2,
-                }
-            },
-            {
-                widget: {
-                    type: 'kpi',
-                    refresh: '5',
-                    webId: 'A0EPUDmN4uvgkyiAt_SPv5vtg991umqry5RGAvwANOjKA4ANSkJlh49lVwXIb5mEqRnkwSlVQSVRFUjAwMVxTQU4gRElFR08gQUlSUE9SVFxIVkFDXFRFUk1JTkFMU1xURVJNSU5BTCAxXEVBU1RcQUlSIEhBTkRMRVIgMjhcQUgtMjggUkVUVVJOIEFJUiBDQUxDVUxBVElPTlN8Uk9PTSBDQVJCT04gRElPWElERQ'
-                },
-                container: {
-                    width: 2,
-<<<<<<< HEAD
-                    height: 2
-                }
-            },
-            {
-                widget: {
-                    type: 'widget3',
-                    refresh: '5',
-                    webId: 'A0EPUDmN4uvgkyiAt_SPv5vtg991umqry5RGAvwANOjKA4ANSkJlh49lVwXIb5mEqRnkwSlVQSVRFUjAwMVxTQU4gRElFR08gQUlSUE9SVFxIVkFDXFRFUk1JTkFMU1xURVJNSU5BTCAxXEVBU1RcQUlSIEhBTkRMRVIgMjhcQUgtMjggUkVUVVJOIEFJUiBDQUxDVUxBVElPTlN8Uk9PTSBDQVJCT04gRElPWElERQ'
-                },
-                container: {
-                    width: 2,
-                    height: 3
-=======
-                    height: 1
->>>>>>> alanTheGreat
-                }
-            }
-        ]
+    if ($stateParams.dashboardId == 0) {
+        return;
     }
-})
-<<<<<<< HEAD
-=======
 
-.directive('dashboardList', function ($compile, lovelyDataService) {
+    lovelyDataService.getDashboardConfig($stateParams.dashboardId).then(function (results) {
+        //$scope.config = JSON.parse(results.data.Value);
+
+        $scope.config = {
+            PackeryConfig: {},
+            Widgets: [
+                {
+                    widget: {
+                        type: 'kpi',
+                        refresh: '5',
+                        webId: 'A0EPUDmN4uvgkyiAt_SPv5vtg991umqry5RGAvwANOjKA4ANSkJlh49lVwXIb5mEqRnkwSlVQSVRFUjAwMVxTQU4gRElFR08gQUlSUE9SVFxIVkFDXFRFUk1JTkFMU1xURVJNSU5BTCAxXEVBU1RcQUlSIEhBTkRMRVIgMjhcQUgtMjggUkVUVVJOIEFJUiBDQUxDVUxBVElPTlN8Uk9PTSBDQVJCT04gRElPWElERQ'
+                    },
+                    container: {
+                        width: 2,
+                        height: 2
+                    }
+                }, {
+                    widget: {
+                        type: 'bullet',
+                        refresh: '5',
+                        start: 0,
+                        end: 1500,
+                        targetId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwffXeUu7YkFEalWC0lAWq6gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgTUFYSU1VTQ',
+                        startId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwgX6mwhal-Vw47iSXovLi1gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgMS1IT1VSIE1BWElNVU0'
+                    },
+                    container: {
+                        width: 3,
+                        height: 1
+                    }
+                },
+            ]
+        }
+    });
+})
+
+.directive('dashboardList', function ($compile, lovelyDataService, $state) {
 
     return {
-        scope: {},
+        scope: {
+        },
         transclude: true,
         restrict: 'E',
         link: function ($scope, element, attrs) {
+            
             lovelyDataService.getDashboards().then(function (results) {
                 var html = "<ion-list>";
 
@@ -88,8 +74,8 @@ angular.module('starter.controllers', [])
                 $compile(htmlElement)($scope);
                 element.append(htmlElement);
 
+                $state.go("app.dashboard",{ "dashboardId": results.data[0].WebId }, { reload: true });
             })
         }
     }
 })
->>>>>>> alanTheGreat
