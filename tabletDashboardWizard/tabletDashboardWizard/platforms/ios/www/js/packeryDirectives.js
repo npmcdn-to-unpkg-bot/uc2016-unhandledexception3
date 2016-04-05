@@ -33,7 +33,7 @@
                 });
 
                 for (var i = 0; i < $scope.configuration.Widgets.length; i++) {
-                    if ($scope.configuration.Widgets[i].widget.type == 'bullet')
+                    if ($scope.configuration.Widgets[i].widget.type.indexOf('bullet')  > -1)
                         var widgetElement = angular.element("<div packery-Container configuration='configuration.Widgets[" + i + "]' class='module'></div>");
                     else
                         var widgetElement = angular.element("<div packery-Container configuration='configuration.Widgets[" + i + "]' class='module nonBullet'></div>");
