@@ -11,7 +11,9 @@
             startScaleValue: $scope.startValue,
             endScaleValue: $scope.endValue,
             value: $scope.value,
-            target: $scope.target
+            target: $scope.target,
+            color: 'powderblue',
+            title: 'Bullet',
         }
 
         $scope.getData = function () {

@@ -89,4 +89,4 @@
           transition: transform 0.2s;
 }
 
-.module div {height:100% !important}
+.nonBullet div {height:100% !important}
