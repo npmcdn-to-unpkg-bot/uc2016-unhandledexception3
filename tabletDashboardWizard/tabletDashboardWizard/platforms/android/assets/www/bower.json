@@ -6,7 +6,6 @@
   },
   "dependencies": {
     "packery": "~2.0.0",
-    "ngtoast": "~2.0.0",
-    "jquery": "2.1.4"
+    "ngtoast": "~2.0.0"
   }
 }

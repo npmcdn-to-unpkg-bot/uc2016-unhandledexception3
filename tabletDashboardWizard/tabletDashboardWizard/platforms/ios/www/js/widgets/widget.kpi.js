@@ -6,17 +6,18 @@
         $scope.units = "";
 
 
+
         $scope.kpiValue = {
             scale: {
                 startValue: 0,
-                endValue: 1500,
+                endValue: 1000,
                 tickInterval: 100
             },
             rangeContainer: {
                 ranges: [
-                    { startValue: 0, endValue: 1000 },
-                     { startValue: 1000, endValue: 1500 },
-                    { startValue: 1000, endValue: 1500 }
+                    { startValue: 0, endValue: 750 },
+                     { startValue: 750, endValue: 1000 },
+                    { startValue: 750, endValue: 1000 }
                 ]
             },
             title:{
@@ -33,10 +34,19 @@
         }
 
 
+
+
         $scope.getData = function () {
             lovelyDataService.getKpi($scope.config.webId).then(function (result) {
+<<<<<<< HEAD
+                    $scope.value = result.data.Value;
+                    $scope.units = result.data.UnitsAbbreviation;
+                   
+
+=======
                 $scope.value = result.data[0].Value;
                 $scope.units = result.data[0].UnitsAbbreviation;
+>>>>>>> alanTheGreat
             }, function (error) {
 
             });
@@ -57,9 +67,12 @@
      
 
 
+<<<<<<< HEAD
 
     }];
 
+=======
+>>>>>>> alanTheGreat
     return {
         scope: {
             config: '='
