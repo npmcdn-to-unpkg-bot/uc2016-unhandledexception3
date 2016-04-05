@@ -37,17 +37,6 @@ angular.module('starter.controllers', [])
                     height: 2
                 }
             },
-            {
-                widget: {
-                    type: 'widget3',
-                    refresh: '5',
-                    webId: 'A0EPUDmN4uvgkyiAt_SPv5vtg991umqry5RGAvwANOjKA4ANSkJlh49lVwXIb5mEqRnkwSlVQSVRFUjAwMVxTQU4gRElFR08gQUlSUE9SVFxIVkFDXFRFUk1JTkFMU1xURVJNSU5BTCAxXEVBU1RcQUlSIEhBTkRMRVIgMjhcQUgtMjggUkVUVVJOIEFJUiBDQUxDVUxBVElPTlN8Uk9PTSBDQVJCT04gRElPWElERQ'
-                },
-                container: {
-                    width: 2,
-                    height: 3
-                }
-            }
         ]
     }
 })
