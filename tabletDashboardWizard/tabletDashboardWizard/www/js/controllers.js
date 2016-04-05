@@ -36,16 +36,17 @@ angular.module('starter.controllers', [])
                     }
                 }, {
                     widget: {
-                        type: 'bullet',
+                        type: 'trend',
                         refresh: '5',
-                        start: 0,
-                        end: 1500,
-                        targetId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwffXeUu7YkFEalWC0lAWq6gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgTUFYSU1VTQ',
-                        startId: 'A0EtIcvAS36yE2ccCuS-tUXgAajPZ9ZX65RGAygANOjDYOwgX6mwhal-Vw47iSXovLi1gU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4XEFILTI4IFJFVFVSTiBBSVIgQ0FMQ1VMQVRJT05TfFJPT00gQ0FSQk9OIERJT1hJREUgMS1IT1VSIE1BWElNVU0'
+                        name: 'Supply Air Temperature',
+                        trend1: 'Temperature',
+                        trend2: 'Setpoint',
+                        targetId: 'A0EtIcvAS36yE2ccCuS-tUXgAZzPZ9ZX65RGAygANOjDYOwWCD6lbIP3kWsM2AIgOCzKQU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4fFRFUk1JTkFMIDEgRUFTVCBBSC0yOCBTVVBQTFkgQUlSIFRFTVBFUkFUVVJF',
+                        startId: 'A0EtIcvAS36yE2ccCuS-tUXgAZzPZ9ZX65RGAygANOjDYOwQU9XdPkCzk6XmezuIXlCXQU0FUVVJOMDQyXFNBTi1EU1RcSFZBQ1xURVJNSU5BTFNcVEVSTUlOQUwgMVxFQVNUXEFJUiBIQU5ETEVSIDI4fFRFUk1JTkFMIDEgRUFTVCBBSC0yOCBTVVBQTFkgQUlSIFNFVCBQT0lOVA'
                     },
                     container: {
-                        width: 3,
-                        height: 1
+                        width: 7,
+                        height: 4
                     }
                 },
             ]

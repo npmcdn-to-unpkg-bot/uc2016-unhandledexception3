@@ -23,10 +23,20 @@
         return $http.get(endpoint + 'getdashboardconfig?_WebId=' + webId);
     }
 
+    var getTrends = function (webIds) {
+        var url = "?garbage=0";
+        for (var i = 0; i < webIds.length; i++) {
+            url += "&_WebId=" + webIds[i];
+        }
+
+        return $http.get(endpoint + 'getplot' + url)
+    }
+
     return {
         getKpi: getKpi,
         getKpis: getKpis,
         getDashboards: getDashboards,
-        getDashboardConfig: getDashboardConfig
+        getDashboardConfig: getDashboardConfig,
+        getTrends: getTrends
     }
 }])
