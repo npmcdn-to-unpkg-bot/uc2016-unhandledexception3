@@ -13,6 +13,13 @@ angular.module('starter.controllers', [])
 })
 
 .controller('DashboardCtrl', function ($scope) {
+<<<<<<< HEAD
+=======
+    
+
+
+
+>>>>>>> alanTheGreat
 
     $scope.config = {
         PackeryConfig: {  },
@@ -22,7 +29,11 @@ angular.module('starter.controllers', [])
                     type: 'trend'
                 },
                 container: {
+<<<<<<< HEAD
                     width: 2,
+=======
+                    width: 1,
+>>>>>>> alanTheGreat
                     height: 2,
                 }
             },
@@ -34,6 +45,7 @@ angular.module('starter.controllers', [])
                 },
                 container: {
                     width: 2,
+<<<<<<< HEAD
                     height: 2
                 }
             },
@@ -46,8 +58,38 @@ angular.module('starter.controllers', [])
                 container: {
                     width: 2,
                     height: 3
+=======
+                    height: 1
+>>>>>>> alanTheGreat
                 }
             }
         ]
     }
 })
+<<<<<<< HEAD
+=======
+
+.directive('dashboardList', function ($compile, lovelyDataService) {
+
+    return {
+        scope: {},
+        transclude: true,
+        restrict: 'E',
+        link: function ($scope, element, attrs) {
+            lovelyDataService.getDashboards().then(function (results) {
+                var html = "<ion-list>";
+
+                for (var i = 0; i < results.data.length; i++) {
+                    html += "<ion-item menu-close href=#/app/dashboard/" + results.data[i].WebId + ">" + results.data[i].Name + "</ion-item>";
+                }
+                html += "</ion-list>";
+
+                var htmlElement = angular.element(html);
+                $compile(htmlElement)($scope);
+                element.append(htmlElement);
+
+            })
+        }
+    }
+})
+>>>>>>> alanTheGreat

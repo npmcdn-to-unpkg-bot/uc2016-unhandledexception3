@@ -5,6 +5,7 @@
         $scope.value = "";
         $scope.units = "";
 
+<<<<<<< HEAD
 
 
         $scope.kpiValue = {
@@ -42,6 +43,12 @@
                     $scope.units = result.data.UnitsAbbreviation;
                    
 
+=======
+        $scope.getData = function () {
+            lovelyDataService.getKpi($scope.config.webId).then(function (result) {
+                $scope.value = result.data.Value;
+                $scope.units = result.data.UnitsAbbreviation;
+>>>>>>> alanTheGreat
             }, function (error) {
 
             });
@@ -49,8 +56,11 @@
 
         $scope.refreshInterval = $interval(function () {
             $scope.getData();
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> alanTheGreat
         }, $scope.config.refresh * 1000);
 
         $scope.$on('$destroy', function() {
@@ -58,6 +68,7 @@
             $scope.refreshInterval = null;
         });
 
+<<<<<<< HEAD
             $scope.getData();
      
 
@@ -65,6 +76,12 @@
 
     }];
 
+=======
+        $scope.getData();
+    }];
+
+
+>>>>>>> alanTheGreat
     return {
         scope: {
             config: '='

@@ -33,7 +33,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'packery.controllers'
       })
 
     .state('app.dashboard', {
+<<<<<<< HEAD
         url: '/dashboard',
+=======
+        url: '/dashboard/:dashboardId',
+>>>>>>> alanTheGreat
         views: {
             'menuContent': {
                 templateUrl: 'templates/dashboard.html',
