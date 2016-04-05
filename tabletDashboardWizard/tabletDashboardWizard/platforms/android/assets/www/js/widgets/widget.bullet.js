@@ -1,14 +1,22 @@
 ﻿angular.module('widget')
-.directive("kpi", function () {
+.directive("bullet", function () {
 
-    var kpiController = ['$scope','lovelyDataService','$interval', function ($scope, lovelyDataService, $interval) {
-        $scope.value = "";
-        $scope.units = "";
+    var bulletController = ['$scope', 'lovelyDataService', '$interval', function ($scope, lovelyDataService, $interval) {
+        $scope.value = 50;
+        $scope.startValue = 0,
+        $scope.endValue = 100;
+        $scope.target = 50;
+
+        $scope.bulletConfig = {
+            startScaleValue: $scope.startValue,
+            endScaleValue: $scope.endValue,
+            value: $scope.value,
+            target: $scope.target
+        }
 
         $scope.getData = function () {
-            lovelyDataService.getKpi($scope.config.webId).then(function (result) {
-                $scope.value = result.data[0].Value;
-                $scope.units = result.data[0].UnitsAbbreviation;
+            lovelyDataService.getKpis([$scope.config.startId, $scope.config.targetId]).then(function (result) {
+                
             }, function (error) {
 
             });
@@ -18,13 +26,15 @@
             $scope.getData();
         }, $scope.config.refresh * 1000);
 
-        $scope.$on('$destroy', function() {
+        $scope.$on('$destroy', function () {
             $interval.cancel($scope.refreshInterval);
             $scope.refreshInterval = null;
         });
 
         $scope.getData();
+
     }];
+
 
     return {
         scope: {
@@ -32,7 +42,7 @@
         },
         transclue: true,
         restrict: 'E',
-        templateUrl: 'js/widgets/templates/kpi.html',
-        controller: kpiController,
+        templateUrl: 'js/widgets/templates/bullet.html',
+        controller: bulletController,
     }
 });
