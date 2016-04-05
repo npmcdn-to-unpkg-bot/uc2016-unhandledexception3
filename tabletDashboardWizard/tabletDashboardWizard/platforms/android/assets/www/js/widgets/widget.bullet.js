@@ -2,17 +2,37 @@
 .directive("bullet", function () {
 
     var bulletController = ['$scope', 'lovelyDataService', '$interval','$compile', function ($scope, lovelyDataService, $interval,$compile) {
-        $scope.value = 0;
+        $scope.value = 5;
         $scope.startValue = $scope.config.start,
         $scope.endValue = $scope.config.end;
-        $scope.target = 50;
+        $scope.target = 1000;
 
         $scope.bulletConfig = {
             startScaleValue: $scope.startValue,
             endScaleValue: $scope.endValue,
-            value: $scope.value,
+            
             target: $scope.target,
-            dataSource: $scope.value,
+            color: 'powderblue',
+           
+            bindingOptions: {
+                value: 'value'
+            },
+
+            tooltip: {
+            color: 'seashell',
+            format: 'fixedPoint',
+            precision: 2,
+            font: {
+                color: 'crimson',
+                size: 10,
+                family: 'Zapf-Chancery, cursive',
+                opacity: 0.75,
+                weight: 400
+            }
+        }
+        
+        
+
         }
 
         $scope.getData = function () {

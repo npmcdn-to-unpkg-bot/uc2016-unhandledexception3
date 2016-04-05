@@ -5,20 +5,28 @@
     var getKpi = function (webId) {
         return $http.get(endpoint + 'GetKPI?_WebId=' + webId);
     }
+
+    var getKpis = function (webIds) {
+        var url = "?garbage=0";
+        for (var i = 0; i < webIds.length; i++) {
+            url += "&_WebId=" + webIds[i];
+        }
+
+        return $http.get(endpoint + 'GetKPI' + url);
+    }
     
-<<<<<<< HEAD
-
-
-    return {
-        getKpi: getKpi
-=======
     var getDashboards = function () {
         return $http.get(endpoint + 'getdashboards');
     }
 
+    var getDashboardConfig = function (webId) {
+        return $http.get(endpoint + 'getdashboardconfig?_WebId=' + webId);
+    }
+
     return {
         getKpi: getKpi,
-        getDashboards: getDashboards
->>>>>>> alanTheGreat
+        getKpis: getKpis,
+        getDashboards: getDashboards,
+        getDashboardConfig: getDashboardConfig
     }
 }])

@@ -7,19 +7,19 @@
 
         $scope.kpiValue = {
             scale: {
-                startValue: 0,
-                endValue: 1000,
-                tickInterval: 100
+                startValue: 40,
+                endValue: 100,
+                tickInterval: 5
             },
             rangeContainer: {
                 ranges: [
-                    { startValue: 0, endValue: 750 },
-                     { startValue: 750, endValue: 1000 },
-                    { startValue: 750, endValue: 1000 }
+                    { startValue: 40, endValue: 65, color: '#0A0092' },
+                     { startValue: 65, endValue: 75, color: '#77DD77' },
+                    { startValue: 75, endValue: 100, color: '#92000A' }
                 ]
             },
             title:{
-                text: 'KPI',
+                text: 'Room Air Temp',
                 verticalAlignment: 'bottom',
                 placeholderSize:10,
                 margin: { top: 40},

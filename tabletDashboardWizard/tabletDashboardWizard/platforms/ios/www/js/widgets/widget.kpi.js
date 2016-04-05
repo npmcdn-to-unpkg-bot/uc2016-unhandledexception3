@@ -5,24 +5,21 @@
         $scope.value = "";
         $scope.units = "";
 
-<<<<<<< HEAD
-
-
         $scope.kpiValue = {
             scale: {
-                startValue: 0,
-                endValue: 1000,
-                tickInterval: 100
+                startValue: 40,
+                endValue: 100,
+                tickInterval: 5
             },
             rangeContainer: {
                 ranges: [
-                    { startValue: 0, endValue: 750 },
-                     { startValue: 750, endValue: 1000 },
-                    { startValue: 750, endValue: 1000 }
+                    { startValue: 40, endValue: 65, color: '#0A0092' },
+                     { startValue: 65, endValue: 75, color: '#77DD77' },
+                    { startValue: 75, endValue: 100, color: '#92000A' }
                 ]
             },
             title:{
-                text: 'KPI',
+                text: 'Room Air Temp',
                 verticalAlignment: 'bottom',
                 placeholderSize:10,
                 margin: { top: 40},
@@ -34,21 +31,10 @@
             }
         }
 
-
-
-
         $scope.getData = function () {
             lovelyDataService.getKpi($scope.config.webId).then(function (result) {
-                    $scope.value = result.data.Value;
-                    $scope.units = result.data.UnitsAbbreviation;
-                   
-
-=======
-        $scope.getData = function () {
-            lovelyDataService.getKpi($scope.config.webId).then(function (result) {
-                $scope.value = result.data.Value;
-                $scope.units = result.data.UnitsAbbreviation;
->>>>>>> alanTheGreat
+                $scope.value = result.data[0].Value;
+                $scope.units = result.data[0].UnitsAbbreviation;
             }, function (error) {
 
             });
@@ -56,11 +42,8 @@
 
         $scope.refreshInterval = $interval(function () {
             $scope.getData();
-<<<<<<< HEAD
 
 
-=======
->>>>>>> alanTheGreat
         }, $scope.config.refresh * 1000);
 
         $scope.$on('$destroy', function() {
@@ -68,20 +51,11 @@
             $scope.refreshInterval = null;
         });
 
-<<<<<<< HEAD
             $scope.getData();
-     
-
-
 
     }];
 
-=======
-        $scope.getData();
-    }];
 
-
->>>>>>> alanTheGreat
     return {
         scope: {
             config: '='

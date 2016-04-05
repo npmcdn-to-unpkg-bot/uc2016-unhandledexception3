@@ -1,5 +1,5 @@
 ﻿angular.module('widget')
-.directive("bullet", function () {
+.directive("bullet2", function () {
 
     var bulletController = ['$scope', 'lovelyDataService', '$interval','$compile', function ($scope, lovelyDataService, $interval,$compile) {
         $scope.value = 5;
@@ -88,7 +88,7 @@
         },
         transclue: true,
         restrict: 'E',
-        templateUrl: 'js/widgets/templates/bullet.html',
+        templateUrl: 'js/widgets/templates/bullet2.html',
         link: function($scope,element,attrs){
             $scope.element = element;
         },

@@ -1,5 +1,5 @@
 ﻿angular.module('widget')
-.directive("kpi", function () {
+.directive("kpi2", function () {
 
     var kpiController = ['$scope','lovelyDataService','$interval', function ($scope, lovelyDataService, $interval) {
         $scope.value = "";
@@ -7,19 +7,19 @@
 
         $scope.kpiValue = {
             scale: {
-                startValue: 40,
-                endValue: 100,
-                tickInterval: 5
+                startValue: 0,
+                endValue: 1500,
+                tickInterval: 100
             },
             rangeContainer: {
                 ranges: [
-                    { startValue: 40, endValue: 65, color: '#0A0092' },
-                     { startValue: 65, endValue: 75, color: '#77DD77' },
-                    { startValue: 75, endValue: 100, color: '#92000A' }
+                    { startValue: 0, endValue: 1000 },
+                     { startValue: 1000, endValue: 1500 },
+                    { startValue: 1000, endValue: 1500 }
                 ]
             },
             title:{
-                text: 'Room Air Temp',
+                text: 'KPI',
                 verticalAlignment: 'bottom',
                 placeholderSize:10,
                 margin: { top: 40},
