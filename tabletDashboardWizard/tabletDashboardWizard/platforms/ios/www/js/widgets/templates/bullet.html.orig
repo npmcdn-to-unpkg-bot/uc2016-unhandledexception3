@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+﻿<div>Bullet Title
+=======
+﻿<div>
+>>>>>>> alanTheGreat
+    <div dx-bullet='{{bulletConfig}}'></div>
+</div>

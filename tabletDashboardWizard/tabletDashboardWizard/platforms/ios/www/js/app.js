@@ -33,11 +33,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'packery.controllers'
       })
 
     .state('app.dashboard', {
-<<<<<<< HEAD
-        url: '/dashboard',
-=======
         url: '/dashboard/:dashboardId',
->>>>>>> alanTheGreat
         views: {
             'menuContent': {
                 templateUrl: 'templates/dashboard.html',
@@ -46,7 +42,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'packery.controllers'
         }
     });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/dashboard');
+    $urlRouterProvider.otherwise('/app/dashboard/0');
 
 
 });
